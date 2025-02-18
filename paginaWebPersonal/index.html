@@ -1,175 +1,235 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Mi Página Personal</title>
-        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-        <style>
-            body {
-                margin: 0;
-                height: 100vh;
-                display: flex;
-                flex-direction: column;
-                font-family: 'Lato', sans-serif;
-            }
 
-            #titulo h1{
-                font-size: 80px;
-            }
-            #titulo p{
-                font-size: 30px;
-            }
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lydia García Molina - Desarrolladora Web</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
 
-            #contenedor {
-                position: relative;
-                height: 100%;
-            }
+<body>
 
-            #fondosuperior, #fondoinferior {
-                height: 50%;
-                width: 100%;
-            }
-
-            #fondosuperior {
-                position: relative;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                padding-top: 35px;
-                overflow: hidden;
-            }
-
-            #fondosuperior::before {
-                content: "";
-                position: absolute;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                background-image: url('fonfopantalla.jpg'); /* Fondo superior */
-                background-size: cover;
-                background-position: center;
-                filter: blur(3px); /* Aplica el desenfoque al fondo */
-                z-index: 1;
-            }
-
-            #titulo {
-                color: #fff;
-                z-index: 2;
-                position: absolute;
-                top: 8%;
-                text-align: center;
-            }
-
-
-            #imagen {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                z-index: 3;
-                border-radius: 50%;
-                overflow: hidden;
-                box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-            }
-
-            #imagen img {
-                width: 250px;
-                height: 250px;
-            }
-
-            #fondoinferior {
-                background-color: white;
-                display: flex;
-                justify-content: center; /* Centra las columnas horizontalmente */
-                align-items: center; /* Centra las columnas verticalmente */
-                padding: 20px;
-                width: 100%;
-                box-sizing: border-box;
-            }
-
-            .texto {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                width: 600px; /* Ocupa la mitad izquierda */
-                text-align: left;
-                line-height: 25px;
-            }
-
-            #redessociales{
-                display: flex;
-                align-items: center;
-                width: 500px; /* Ocupa la mitad izquierda */
-                text-align: center;
-            }
-
-            #redessociales img{
-                margin-left: 100px;
-                width: 50px;
-            }
-            @media (max-width: 768px) {
-                #titulo h1 {
-                    font-size: 36px; /* Texto más pequeño */
-                }
-
-                #imagen img {
-                    width: 120px; /* Imagen más pequeña */
-                    height: 120px;
-                }
-
-                .texto {
-                    width: 90%; /* Reduce el ancho */
-                    font-size: 14px; /* Texto más pequeño */
-                }
-
-                #redessociales img {
-                    width: 30px; /* Íconos más pequeños */
-                }
-
-                #fondoinferior {
-                    flex-direction: column; /* Cambia las columnas a diseño vertical */
-                    align-items: center;
-                }
-            }
-        </style>
-    </head>
-
-
-    <body>
-        <div id="contenedor">
-            <div id="fondosuperior">
-                <div id="titulo">
-                    <h1>Lydia García Molina</h1>
-                    <p>Desarrolladora de aplicaciones web</p>
-                </div>
+    <!-- Barra de navegación -->
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <a href="#inicio">Lydia García Molina</a>
             </div>
-            <div id="imagen">
-                <img src="foto.jpg" alt="Imagen personal">
+            <nav>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#sobreMi">¿Quién soy?</a></li>
+                    <li><a href="#cv">Mi Currículum</a></li>
+                    <li><a href="#servicios">Mis Servicios</a></li>
+                    <li><a href="#portafolio">Mi Portafolio</a></li>
+                    <li><a href="#noticias">Noticias</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Sección de bienvenida -->
+    <section id="inicio">
+        <div class="fondo"></div> <!-- Contenedor del fondo difuso -->
+        <div class="inicio-content">
+            <h1>Hola, soy Lydia García Molina</h1>
+            <p>Desarrolladora Web con pasión por crear soluciones innovadoras y funcionales.</p>
+            <a href="#sobreMi" class="btn btn-dark">Descubre más sobre mi camino como desarrolladora</a>
+        </div>
+    </section>
+
+    <!-- Sección ¿Quién soy? -->
+    <section id="sobreMi" class="sobreMi">
+        <h2>¿Quién soy?</h2>
+        <img src="foto.jpg" alt="Lydia García Molina" class="imagen-sobre-mi">
+        <p>¡Hola! Soy Lydia García Molina, una desarrolladora web apasionada por la tecnología y el diseño. Aunque mi
+            formación es principalmente técnica, el arte siempre ha sido una gran fuente de inspiración en mi vida, y lo
+            considero una herramienta clave en el desarrollo web.</p>
+
+        <p>Para mí, cada sitio web o aplicación que creo es como una obra de arte en sí misma. Así como un pintor
+            utiliza su paleta de colores y pinceles para dar vida a una idea, yo uso HTML, CSS, JavaScript y otros
+            lenguajes para crear interfaces visualmente atractivas y funcionales. La creatividad que me inspira el arte
+            se refleja en el diseño de cada proyecto que desarrollo, siempre buscando que la experiencia del usuario sea
+            tan estética como intuitiva.</p>
+
+        <p>El arte me ha enseñado a valorar la atención al detalle y la importancia de cada elemento dentro de un
+            conjunto. Esto lo aplico al desarrollo web, donde cada línea de código, cada diseño y cada interacción
+            tienen un propósito y un impacto en el producto final. En definitiva, creo que el arte y el desarrollo web
+            no son tan diferentes: ambos buscan transformar ideas abstractas en algo tangible y significativo.</p>
+
+        <p>Fuera de la programación, mis pasiones incluyen disfrutar de las expresiones artísticas, ya sea visitando
+            galerías, explorando nuevos estilos de diseño o simplemente admirando el trabajo de otros creativos. También
+            me encanta ir al cine, explorar diferentes tipos de arte culinario, y siempre busco formas de inspirarme y
+            aprender más sobre el mundo que me rodea.</p>
+
+        <p>Como desarrolladora web, mi objetivo es seguir creciendo, aprendiendo y creando experiencias digitales que no
+            solo sean funcionales, sino también visualmente atractivas y con un enfoque humano. Si buscas a alguien con
+            pasión por el diseño y el desarrollo, ¡aquí estoy!</p>
+    </section>
+
+
+    <!-- Sección Mi currículum -->
+    <section id="cv">
+        <div class="cv-container">
+            <!-- Imagen del CV -->
+            <div class="cv-image">
+                <img src="cv.jpg" alt="Vista previa de mi CV" />
             </div>
-            <div id="fondoinferior">
-                <div class="texto">
-                    <h1>Sobre mí</h1>
-                    <p>
-                        Soy una desarrolladora apasionada por la creación de aplicaciones web.<br>
-                        Me especializo en el desarrollo frontend y backend,
-                        y siempre estoy buscando aprender nuevas tecnologías y mejorar mis habilidades.
-                    </p>
-                </div>
-                <div id="redessociales">
-                    <a href="https://www.linkedin.com/in/lygarmo/">
-                        <img src="logolinkedin.png" alt="logo de LinkedIn">
-                    </a>
-                    <a href="https://github.com/lygarmo">
-                        <img src="logogithub.png" alt="logo de GitHub">
-                    </a>
-                    <a href="CV_LydiaGarciaMolina.pdf" download="CV_LydiaGarciaMolina.pdf">
-                        <img src="logocv.png" alt="icono de CV">
-                    </a>
-                </div>
+
+            <!-- Mensaje de descarga -->
+            <div class="cv-download">
+                <h2>Visualización de mi CV</h2>
+                <p>Esta es una visualización de mi curriculum. Para verlo completo, <a href="CV_LydiaGarciaMolina.pdf"
+                        download>descárgalo aquí</a>.</p>
             </div>
         </div>
-    </body>
+    </section>
+
+    <section id="servicios" class="servicios">
+        <div class="servicios-content">
+            <h2>Mis Servicios</h2>
+            <p>Como recién graduada en Desarrollo de Aplicaciones Web, he adquirido los conocimientos y habilidades
+                necesarias para crear soluciones web modernas y eficientes. Aunque estoy al inicio de mi carrera
+                profesional, tengo una gran pasión por el desarrollo web y estoy dispuesta a asumir nuevos retos. A
+                continuación, te comparto algunos de los servicios que puedo ofrecerte:</p>
+
+            <div class="servicio">
+                <h3>Desarrollo de Sitios Web Responsivos</h3>
+                <p>Estoy capacitada para crear sitios web responsivos que se adaptan perfectamente a diferentes
+                    dispositivos, garantizando una experiencia de usuario fluida y agradable en cualquier pantalla, ya
+                    sea móvil, tablet o escritorio.</p>
+            </div>
+
+            <div class="servicio">
+                <h3>Diseño y Maquetación con HTML, CSS y JavaScript</h3>
+                <p>Utilizo HTML, CSS y JavaScript para crear diseños atractivos y funcionales. Mi objetivo es construir
+                    interfaces de usuario intuitivas y fáciles de usar, con un enfoque en la estética y la
+                    accesibilidad.</p>
+            </div>
+
+            <div class="servicio">
+                <h3>Optimización y Mantenimiento de Páginas Web</h3>
+                <p>Ayudo a mejorar el rendimiento y la velocidad de carga de tu sitio web. Aseguro que tu página esté
+                    optimizada para ofrecer la mejor experiencia a los usuarios, además de estar actualizada y
+                    funcionando correctamente.</p>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Sección Mi Portafolio -->
+    <section id="portafolio">
+        <h2>Mi Portafolio</h2>
+        <p>A continuación, te comparto algunos de los proyectos que he realizado durante mi formación. Cada uno de estos
+            proyectos refleja las habilidades y conocimientos adquiridos durante mis estudios, y me gustaría seguir
+            expandiéndolos en futuros desafíos profesionales.</p>
+
+        <!-- Proyecto 1: Formulario de RRHH -->
+        <div class="proyecto">
+            <h3>Proyecto 1: Formulario de RRHH</h3>
+            <p>Este proyecto consiste en un formulario de recursos humanos, donde se gestiona la entrada de datos para
+                registrar empleados en una base de datos. Utilicé tecnologías como HTML, CSS y JavaScript para
+                desarrollar la interfaz y la funcionalidad básica.</p>
+            <a href="https://github.com/lygarmo/Desarrollo-web-en-entorno-cliente/tree/main/loginRRHH" class="btn"
+                target="_blank">Ver Proyecto</a>
+        </div>
+
+        <!-- Proyecto 2: Diseño Web de una tienda de animales -->
+        <div class="proyecto">
+            <h3>Proyecto 2: Diseño Web de una Tienda de Animales</h3>
+            <p>Este es uno de mis primeros ejercicios de diseño web, que consistió en la creación de una página web para
+                una tienda de animales. Me enfoqué en la estructura básica del sitio, la disposición de los productos y
+                la creación de una experiencia visual atractiva utilizando HTML y CSS.</p>
+            <a href="https://github.com/lygarmo/Dise-o-de-interfaces-web/tree/main/dise%C3%B1oPrincipiantePaginaWeb"
+                class="btn" target="_blank">Ver Proyecto</a>
+        </div>
+    </section>
+
+
+    <!-- Sección Noticias -->
+    <section id="noticias">
+        <h2>Noticias</h2>
+
+        <!-- Artículo 1: Imagen a la izquierda, texto a la derecha -->
+        <article class="noticia">
+            <div class="noticia-content">
+                <div class="noticia-image">
+                    <img src="teachfest.jpg" alt="Imagen noticia 1">
+                </div>
+                <div class="noticia-text">
+                    <h3>Conferencias del TechFest 2025 en Madrid</h3>
+                    <p>¡El TechFest 2025 se acerca! Es uno de los eventos más importantes para desarrolladores y
+                        expertos en tecnología. Tendrá lugar en Madrid, y es una excelente oportunidad para aprender
+                        sobre nuevas tendencias, herramientas y prácticas en el campo del desarrollo web. ¡No te lo
+                        puedes perder!</p>
+                    <a href="https://t3chfest.es/2025/" class="btn" target="_blank">Más información sobre el evento</a>
+                </div>
+            </div>
+        </article>
+
+        <!-- Artículo 2: Imagen a la derecha, texto a la izquierda -->
+        <article class="noticia">
+            <div class="noticia-content reverse">
+                <div class="noticia-text">
+                    <h3>DeepSeek: Una IA que revoluciona la búsqueda en internet</h3>
+                    <p>DeepSeek es una nueva tecnología basada en inteligencia artificial que está cambiando la forma en
+                        que buscamos información en línea. Utilizando redes neuronales profundas, DeepSeek es capaz de
+                        entender la intención del usuario detrás de sus consultas, ofreciendo resultados más precisos y
+                        relevantes que los motores de búsqueda tradicionales.</p>
+                    <p>Además, esta IA no solo mejora la búsqueda de información textual, sino que también es capaz de
+                        interpretar imágenes, videos y otros tipos de contenido multimodal, lo que la convierte en una
+                        herramienta poderosa para investigadores, desarrolladores y empresas que dependen de grandes
+                        volúmenes de datos.</p>
+                    <a href="https://www.deepseek.ai" class="btn" target="_blank">Descubre más sobre DeepSeek</a>
+                </div>
+                <div class="noticia-image">
+                    <img src="deepseek.webp" alt="Imagen noticia 2">
+                </div>
+            </div>
+        </article>
+    </section>
+
+
+
+    <!-- Sección de contacto -->
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <p>Si deseas ponerte en contacto conmigo, por favor completa el formulario a continuación, y estaré encantada de
+            responderte lo antes posible.</p>
+
+        <form action="mailto:tuemail@example.com" method="post" enctype="text/plain">
+            <div class="form-group">
+                Tu nombre
+                <input type="text" id="nombre" name="nombre" required placeholder="Introduce tu nombre">
+            </div>
+
+            <div class="form-group">
+                Tu correo electrónico
+                <input type="text" id="correo" name="correo" required placeholder="Introduce tu correo electrónico">
+            </div>
+
+            <div class="form-group">
+                Tu mensaje
+                <textarea id="mensaje" name="mensaje" required placeholder="Escribe tu mensaje aquí"></textarea>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="btn">Enviar mensaje</button>
+            </div>
+        </form>
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Lydia García Molina | Todos los derechos reservados</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+
 </html>
