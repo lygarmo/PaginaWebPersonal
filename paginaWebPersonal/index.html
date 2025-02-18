@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mi Página Personal</title>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+        <style>
+            body {
+                margin: 0;
+                height: 100vh;
+                display: flex;
+                flex-direction: column;
+                font-family: 'Lato', sans-serif;
+            }
+
+            #titulo h1{
+                font-size: 80px;
+            }
+            #titulo p{
+                font-size: 30px;
+            }
+
+            #contenedor {
+                position: relative;
+                height: 100%;
+            }
+
+            #fondosuperior, #fondoinferior {
+                height: 50%;
+                width: 100%;
+            }
+
+            #fondosuperior {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                padding-top: 35px;
+                overflow: hidden;
+            }
+
+            #fondosuperior::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-image: url('fonfopantalla.jpg'); /* Fondo superior */
+                background-size: cover;
+                background-position: center;
+                filter: blur(3px); /* Aplica el desenfoque al fondo */
+                z-index: 1;
+            }
+
+            #titulo {
+                color: #fff;
+                z-index: 2;
+                position: absolute;
+                top: 8%;
+                text-align: center;
+            }
+
+
+            #imagen {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                z-index: 3;
+                border-radius: 50%;
+                overflow: hidden;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            }
+
+            #imagen img {
+                width: 250px;
+                height: 250px;
+            }
+
+            #fondoinferior {
+                background-color: white;
+                display: flex;
+                justify-content: center; /* Centra las columnas horizontalmente */
+                align-items: center; /* Centra las columnas verticalmente */
+                padding: 20px;
+                width: 100%;
+                box-sizing: border-box;
+            }
+
+            .texto {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 600px; /* Ocupa la mitad izquierda */
+                text-align: left;
+                line-height: 25px;
+            }
+
+            #redessociales{
+                display: flex;
+                align-items: center;
+                width: 500px; /* Ocupa la mitad izquierda */
+                text-align: center;
+            }
+
+            #redessociales img{
+                margin-left: 100px;
+                width: 50px;
+            }
+            @media (max-width: 768px) {
+                #titulo h1 {
+                    font-size: 36px; /* Texto más pequeño */
+                }
+
+                #imagen img {
+                    width: 120px; /* Imagen más pequeña */
+                    height: 120px;
+                }
+
+                .texto {
+                    width: 90%; /* Reduce el ancho */
+                    font-size: 14px; /* Texto más pequeño */
+                }
+
+                #redessociales img {
+                    width: 30px; /* Íconos más pequeños */
+                }
+
+                #fondoinferior {
+                    flex-direction: column; /* Cambia las columnas a diseño vertical */
+                    align-items: center;
+                }
+            }
+        </style>
+    </head>
+
+
+    <body>
+        <div id="contenedor">
+            <div id="fondosuperior">
+                <div id="titulo">
+                    <h1>Lydia García Molina</h1>
+                    <p>Desarrolladora de aplicaciones web</p>
+                </div>
+            </div>
+            <div id="imagen">
+                <img src="foto.jpg" alt="Imagen personal">
+            </div>
+            <div id="fondoinferior">
+                <div class="texto">
+                    <h1>Sobre mí</h1>
+                    <p>
+                        Soy una desarrolladora apasionada por la creación de aplicaciones web.<br>
+                        Me especializo en el desarrollo frontend y backend,
+                        y siempre estoy buscando aprender nuevas tecnologías y mejorar mis habilidades.
+                    </p>
+                </div>
+                <div id="redessociales">
+                    <a href="https://www.linkedin.com/in/lygarmo/">
+                        <img src="logolinkedin.png" alt="logo de LinkedIn">
+                    </a>
+                    <a href="https://github.com/lygarmo">
+                        <img src="logogithub.png" alt="logo de GitHub">
+                    </a>
+                    <a href="CV_LydiaGarciaMolina.pdf" download="CV_LydiaGarciaMolina.pdf">
+                        <img src="logocv.png" alt="icono de CV">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
